@@ -1,0 +1,10 @@
+<div class="head-top">
+  {{company}}  {{product}}
+  <img (click)="popupmenu()" class="head-top-img" align="right" src={{img_url}}>
+</div>
+<div id="popup" style="display:none;">
+  <a [routerLink]="['']">User Info.</a><br>
+  <a [routerLink]="['']">Name</a><br>
+  <a [routerLink]="['']">Change Password</a><br>
+  <a [routerLink]="['']">Logout</a>
+</div>

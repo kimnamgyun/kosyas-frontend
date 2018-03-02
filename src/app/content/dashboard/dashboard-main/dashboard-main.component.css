@@ -1,0 +1,35 @@
+ul {
+    list-style-type:none;
+    padding:1%;
+    margin-top:2%;
+}
+
+ul li {
+    padding:5%;
+    background:#E0E0E0;
+    color:black;
+    text-align:center;
+    border-radius:5px;
+    margin:0;
+    white-space:nowrap;
+}
+
+ul li a {
+    text-decoration:none;
+    display:block;
+    margin:0;
+    border:0;
+    color:black;
+}
+
+.link_nav {
+    float: left;
+    width: 15%;
+    padding: 1em;
+    background-color:white;
+    height:90%;
+    border-right:solid 1px;
+}
+.tab_menu {
+    margin-bottom :16px;
+}

@@ -1,0 +1,28 @@
+<app-top></app-top>
+<div class="tab_menu">
+<app-tabmenu></app-tabmenu>
+</div>
+
+<div class="link_nav">
+  <ul>
+    <li class="select" ><a [routerLink]="['/dashboard-intrusion-overview']">Intrusion</a></li><br>
+    <div>
+        <li class="sub"><a [routerLink]="['/dashboard-intrusion-overview']">Overview</a></li><br>
+        <li class="sub select"><a [routerLink]="['/dashboard-intrusion-rules']">Rules</a></li><br>
+        <li class="sub"><a [routerLink]="['/dashboard-intrusion-devices']">Devices</a></li><br>
+        <li class="sub"><a [routerLink]="['/dashboard-intrusion-logs']">Logs</a></li><br>
+        <li class="sub"><a [routerLink]="['/dashboard-intrusion-files']">Files</a></li><br>
+    </div>
+    <li><a [routerLink]="['/dashboard-vulnerability']">Vulnerability</a></li><br>
+    <li><a [routerLink]="['/dashboard-systems']">Systems</a></li><br>
+    <li><a [routerLink]="['/dashboard-full-logs']">Full Logs</a></li>
+  </ul>
+</div>
+
+
+<div>
+  <div>
+      <canvas id="line-chart" width="400" height="150" style="margin-left:30px;padding-right:30px;width:500px;height:150;"></canvas>
+  </div>
+
+</div>
