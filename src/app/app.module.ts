@@ -1,7 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+
+import * as FusionCharts from 'fusioncharts';
+import * as Charts from 'fusioncharts/fusioncharts.charts';
+import * as FintTheme from 'fusioncharts/themes/fusioncharts.theme.fint';
+import { FusionChartsModule } from 'angular4-fusioncharts';
 
 import { routing } from './app.routes';
+import { CommonService } from './common.service';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -30,7 +37,15 @@ import { ConfigLogmanageVulnerabilityComponent } from './content/configuration/l
 import { ConfigLogmanageDeviceComponent } from './content/configuration/logmanage/config-logmanage-device/config-logmanage-device.component';
 import { ReportMainComponent } from './content/report/report-main/report-main.component';
 import { ReportConfigurationComponent } from './content/report/report-configuration/report-configuration.component';
+import { Chart1Component } from './chart1/chart1.component';
+import { Chart2PieComponent } from './chart2-pie/chart2-pie.component';
+import { Chart2LineComponent } from './chart2-line/chart2-line.component';
+import { Chart2AreaComponent } from './chart2-area/chart2-area.component';
+import { SystemConfigComponent } from './system-config/system-config.component';
+import { UserConfigComponent } from './user-config/user-config.component';
+import { AnalysisConfig1Component } from './analysis-config1/analysis-config1.component';
 
+FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
 
 @NgModule({
   declarations: [
@@ -60,13 +75,23 @@ import { ReportConfigurationComponent } from './content/report/report-configurat
     ConfigLogmanageVulnerabilityComponent,
     ConfigLogmanageDeviceComponent,
     ReportMainComponent,
-    ReportConfigurationComponent
+    ReportConfigurationComponent,
+    Chart1Component,
+    Chart2PieComponent,
+    Chart2LineComponent,
+    Chart2AreaComponent,
+    SystemConfigComponent,
+    UserConfigComponent,
+    AnalysisConfig1Component
   ],
   imports: [
     BrowserModule,
-    routing
+    HttpModule,
+    routing,
+    FusionChartsModule
+
   ],
-  providers: [],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 
