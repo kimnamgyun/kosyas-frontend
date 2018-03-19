@@ -1,7 +1,18 @@
+<!--
 <div class="tap-menu">
   <button class="btn-tap-menu" [routerLink]="['/dashboard-main']">{{tab_menu1}}</button>
   <button class="btn-tap-menu" [routerLink]="['/analysis-main']">{{tab_menu2}}</button>
   <button class="btn-tap-menu" [routerLink]="['/config-main']">{{tab_menu3}}</button>
   <button class="btn-tap-menu" [routerLink]="['/report-main']">{{tab_menu4}}</button>
   <button class="btn-tap-menu" >{{tab_menu5}}</button>
-</div>  
+</div>
+-->
+
+<div class="tap-menu">
+  <button class="btn-tap-menu" *ngFor="let tablist of TabLists" 
+  [class.selected]="tablist === selectedList" 
+  [routerLink]="[tablist.Link]"
+  (click)="OnSelect(tablist)">
+    {{tablist.name}}
+  </button>
+</div>

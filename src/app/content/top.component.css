@@ -1,7 +1,8 @@
 .head-top  {
-    font-size:250%;
+    font-size:290%;
     margin-top:3%;
     text-align:center;
+    
     width:100%;
     font-weight:bold;
     margin-bottom:3%;
@@ -43,4 +44,15 @@
     color:black;
     margin:0;
     border:0;
+}
+
+.head-logo-img {
+    margin-right:1%;
+    width:1.0em;
+    height:1.0em;
+    object-fit:cover;
+    border-radius:0%;
+    margin-bottom:0;
+    padding-bottom:0;
+    padding:0;    
 }
