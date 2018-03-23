@@ -1,7 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http'; 
+
+import * as FusionCharts from 'fusioncharts';
+import * as Charts from 'fusioncharts/fusioncharts.charts';
+import * as FintTheme from 'fusioncharts/themes/fusioncharts.theme.fint';
+import { FusionChartsModule } from 'angular4-fusioncharts';
 
 import { routing } from './app.routes';
+import { CommonService } from './common.service';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -23,6 +31,7 @@ import { AnalysisOverviewComponent } from './content/analysis/corelation/analysi
 import { AnalysisConfigComponent } from './content/analysis/corelation/analysis-config/analysis-config.component';
 import { AnalysisAddruleComponent } from './content/analysis/corelation/analysis-addrule/analysis-addrule.component';
 import { ConfigMainComponent } from './content/configuration/config-main/config-main.component';
+import { ConfigAgentComponent } from './content/configuration/config-agent/config-agent.component';
 import { ConfigUsermanageComponent } from './content/configuration/config-usermanage/config-usermanage.component';
 import { ConfigSystemmmanageComponent } from './content/configuration/config-systemmmanage/config-systemmmanage.component';
 import { ConfigLogmanageIntrusionComponent } from './content/configuration/logmanage/config-logmanage-intrusion/config-logmanage-intrusion.component';
@@ -30,7 +39,17 @@ import { ConfigLogmanageVulnerabilityComponent } from './content/configuration/l
 import { ConfigLogmanageDeviceComponent } from './content/configuration/logmanage/config-logmanage-device/config-logmanage-device.component';
 import { ReportMainComponent } from './content/report/report-main/report-main.component';
 import { ReportConfigurationComponent } from './content/report/report-configuration/report-configuration.component';
+import { Chart1Component } from './chart1/chart1.component';
+import { Chart2PieComponent } from './chart2-pie/chart2-pie.component';
+import { Chart2LineComponent } from './chart2-line/chart2-line.component';
+import { Chart2AreaComponent } from './chart2-area/chart2-area.component';
+import { SystemConfigComponent } from './system-config/system-config.component';
+import { UserConfigComponent } from './user-config/user-config.component';
+import { AnalysisConfig1Component } from './analysis-config1/analysis-config1.component';
+import { UserinfoComponent } from './userinfo/userinfo.component';
+import { AgentConfigComponent } from './agent-config/agent-config.component';
 
+FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
 
 @NgModule({
   declarations: [
@@ -54,19 +73,33 @@ import { ReportConfigurationComponent } from './content/report/report-configurat
     AnalysisConfigComponent,
     AnalysisAddruleComponent,
     ConfigMainComponent,
+    ConfigAgentComponent,
     ConfigUsermanageComponent,
     ConfigSystemmmanageComponent,
     ConfigLogmanageIntrusionComponent,
     ConfigLogmanageVulnerabilityComponent,
     ConfigLogmanageDeviceComponent,
+    AnalysisConfig1Component,
+    UserinfoComponent,
     ReportMainComponent,
-    ReportConfigurationComponent
+    ReportConfigurationComponent,
+    Chart1Component,
+    Chart2PieComponent,
+    Chart2LineComponent,
+    Chart2AreaComponent,
+    SystemConfigComponent,
+    UserConfigComponent,
+    AgentConfigComponent
   ],
   imports: [
     BrowserModule,
-    routing
+    HttpModule,
+    routing,
+    HttpClientModule,
+    FusionChartsModule
+
   ],
-  providers: [],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 

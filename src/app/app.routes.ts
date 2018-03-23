@@ -1,6 +1,6 @@
 import { Routes,RouterModule } from '@angular/router';
-import { JoinComponent } from './join/join.component';
-import { ForgotComponent } from './forgot/forgot.component';
+//import { JoinComponent } from './join/join.component';
+//import { ForgotComponent } from './forgot/forgot.component';
 import { LoginComponent } from './login/login.component';
 import { TopComponent } from './content/top.component';
 import { TabmenuComponent } from './content/tabmenu.component';
@@ -18,6 +18,7 @@ import { AnalysisOverviewComponent } from './content/analysis/corelation/analysi
 import { AnalysisConfigComponent } from './content/analysis/corelation/analysis-config/analysis-config.component';
 import { AnalysisAddruleComponent } from './content/analysis/corelation/analysis-addrule/analysis-addrule.component';
 import { ConfigMainComponent } from './content/configuration/config-main/config-main.component';
+import { ConfigAgentComponent } from './content/configuration/config-agent/config-agent.component';
 import { ConfigUsermanageComponent } from './content/configuration/config-usermanage/config-usermanage.component';
 import { ConfigSystemmmanageComponent } from './content/configuration/config-systemmmanage/config-systemmmanage.component';
 import { ConfigLogmanageIntrusionComponent } from './content/configuration/logmanage/config-logmanage-intrusion/config-logmanage-intrusion.component';
@@ -25,11 +26,14 @@ import { ConfigLogmanageVulnerabilityComponent } from './content/configuration/l
 import { ConfigLogmanageDeviceComponent } from './content/configuration/logmanage/config-logmanage-device/config-logmanage-device.component';
 import { ReportMainComponent } from './content/report/report-main/report-main.component';
 import { ReportConfigurationComponent } from './content/report/report-configuration/report-configuration.component';
+import { AnalysisConfig1Component } from './analysis-config1/analysis-config1.component';
+import { UserinfoComponent } from './userinfo/userinfo.component';
 
 	const APP_ROUTES:Routes = [
-            {path:'',component: LoginComponent},
-            {path:'join',component: JoinComponent},
-            {path:'forgot',component: ForgotComponent},
+            //{path:'',component: LoginComponent},
+            //{path:'join',component: JoinComponent},
+            //{path:'forgot',component: ForgotComponent},
+            {path:'login',component: LoginComponent},
             {path:'content',component: TopComponent},
             {path:'content1',component: TabmenuComponent},
             {path:'dashboard-main',component: DashboardMainComponent},
@@ -44,15 +48,19 @@ import { ReportConfigurationComponent } from './content/report/report-configurat
             {path:'analysis-main',component: AnalysisMainComponent},
             {path:'analysis-overview',component: AnalysisOverviewComponent},
             {path:'analysis-config',component: AnalysisConfigComponent},
-            {path:'analysis-addrule',component: AnalysisAddruleComponent},
+            //{path:'analysis-addrule',component: AnalysisAddruleComponent},
+            {path:'analysis-addrule',component: AnalysisConfig1Component},
             {path:'config-main',component: ConfigMainComponent},
+            {path:'config-agent',component: ConfigAgentComponent},
             {path:'config-usermanage',component: ConfigUsermanageComponent},
             {path:'config-systemmanage',component: ConfigSystemmmanageComponent},
             {path:'config-logmanage-intrusion',component: ConfigLogmanageIntrusionComponent},
             {path:'config-logmanage-vulnerability',component: ConfigLogmanageVulnerabilityComponent},
             {path:'config-logmanage-device',component: ConfigLogmanageDeviceComponent},
             {path:'report-main',component: ReportMainComponent},
-            {path:'report-configuration',component: ReportConfigurationComponent}
+            {path:'report-configuration',component: ReportConfigurationComponent},
+            {path:'userinfo',component: UserinfoComponent},
+            {path: '',redirectTo: 'dashboard-main', pathMatch: 'full' }
 	];
 
     export const routing = RouterModule.forRoot(APP_ROUTES);
