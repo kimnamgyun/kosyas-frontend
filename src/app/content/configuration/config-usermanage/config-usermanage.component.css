@@ -53,3 +53,11 @@ ul li.sub {
 .tab_menu {
     margin-bottom :16px;
 }
+
+.content-subject {
+    font-weight:bolder;
+    font-size:1.5em;
+    padding-top:1em;
+    padding-left:2em;
+    margin-left:1%;
+}

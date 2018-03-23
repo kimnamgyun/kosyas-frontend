@@ -41,3 +41,22 @@
     width:          15%;
     border-radius:  5px;
 }
+
+.selected {
+    border:         none;
+    display:        inline-block;
+    outline:        0;
+    padding:        8px 12px;
+    margin-left:    2%;
+    margin-top:     0;
+    vertical-align: middle;
+    overflow:       hidden;
+    text-decoration:none;
+    text-align:     center;
+    cursor:         pointer;
+    white-space:    nowrap;
+    color:         #03A9F4!important;
+    background-color:#E0E0E0!important;
+    width:          15%;
+    border-radius:  5px;
+}

@@ -22,14 +22,24 @@ ul li a {
     color:black;
 }
 
+  
 .link_nav {
     float: left;
-    width: 15%;
+    width: 10em;
     padding: 1em;
     background-color:white;
-    height:90%;
+    height:3em;
     border-right:solid 1px;
 }
+
 .tab_menu {
     margin-bottom :16px;
+}
+
+.content-subject {
+    font-weight:bolder;
+    font-size:1.5em;
+    padding-top:1em;
+    padding-left:2em;
+    margin-left:1%;
 }

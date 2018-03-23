@@ -1,8 +1,3 @@
-<app-top></app-top>
-<div class="tab_menu">
-<app-tabmenu></app-tabmenu>
-</div>
-
 <div class="link_nav">
   <ul>
   <!--<li><a [routerLink]="['/dashboard-intrusion-overview']">침입탐지</li><br>
@@ -16,10 +11,19 @@
   </ul>
 </div>
 
-
+<!--
 <div>
   <div>
       <canvas id="line-chart" width="400" height="150" style="margin-left:30px;padding-right:30px;width:500px;height:150;"></canvas>
   </div>
 
+</div>
+-->
+<div class="content-subject">&nbsp;&nbsp;Dash Board
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="button"  (click)="intrusion_kibana()" style="border:none;background:#FFCDD2;color:white;font-size:18px;border-radius:5px;height:30px;width:70px;">kibana</button>
+</div>
+<div class="col-lg-3 col-md-6 col-sm-6" style="margin-left:180px;"><app-chart2-line></app-chart2-line></div>
+<div class="col-lg-3 col-md-6 col-sm-6" style="margin-left:180px;"><app-chart1></app-chart1>&nbsp;
+  <app-chart2-pie></app-chart2-pie>
 </div>

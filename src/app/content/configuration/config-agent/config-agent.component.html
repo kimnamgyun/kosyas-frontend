@@ -1,0 +1,23 @@
+<div class="link_nav">
+    <ul>
+      <li>
+        <a [routerLink]="['/config-logmanage-intrusion']">Log</a>
+      </li>
+      <br>
+      <li>
+        <a [routerLink]="['/config-usermanage']">User</a>
+      </li>
+      <br>
+      <li class="select"><a [routerLink]="['/config-agent']">Agent</a></li><br>
+      <li>
+        <a [routerLink]="['/config-systemmanage']">System</a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="content-subject">&nbsp;&nbsp;Configuration - View Wazuh Manager/Agent configuration
+    <!--<button type="button"  (click)="intrusion_Wazuh()" style="border:none;background:#FFCDD2;color:white;font-size:18px;border-radius:5px;height:30px;width:80px;">Wazuh</button>-->
+  </div>
+  <div style="font-size:20px;margin-left:300px;">
+    <app-agent-config></app-agent-config>
+  </div>

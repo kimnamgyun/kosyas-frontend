@@ -12,4 +12,8 @@ export class ConfigSystemmmanageComponent implements OnInit {
   ngOnInit() {
   }
 
+  intrusion_Celebro(){
+      window.open("http://192.168.0.249:9000/#/overview?host=kng-cluster");
+  };
+
 }

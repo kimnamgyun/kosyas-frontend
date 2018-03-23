@@ -1,20 +1,26 @@
-<app-top></app-top>
-<div class="tab_menu">
-<app-tabmenu></app-tabmenu>
-</div>
-
 <div class="link_nav">
   <ul>
-    <li><a [routerLink]="['/config-logmanage-intrusion']">Log</a></li><br>
-    <li><a [routerLink]="['/config-usermanage']">User</a></li><br>
-    <li class="select"><a [routerLink]="['/config-systemmanage']">System</a></li>
+    <li>
+      <a [routerLink]="['/config-logmanage-intrusion']">Log</a>
+    </li>
+    <br>
+    <li>
+      <a [routerLink]="['/config-usermanage']">User</a>
+    </li>
+    <br>
+    <li><a [routerLink]="['/config-agent']">Agent</a></li><br>
+    <li class="select">
+      <a [routerLink]="['/config-systemmanage']">System</a>
+    </li>
   </ul>
 </div>
 
-
-<div>
-  <div>
-      <canvas id="line-chart" width="400" height="150" style="margin-left:30px;padding-right:30px;width:500px;height:150;"></canvas>
-  </div>
-
+<div class="content-subject">&nbsp;&nbsp;Configuration - View system configuration
+  <button type="button"  (click)="intrusion_Celebro()" style="border:none;background:#FFCDD2;color:white;font-size:18px;border-radius:5px;height:30px;width:80px;">Celebro </button>
+</div>
+<div style="font-size:20px;margin-left:300px;">
+  <!--
+  <app-system-config [celebroData]="celebroData"></app-system-config>
+  -->
+  <app-system-config></app-system-config>
 </div>
