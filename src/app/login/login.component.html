@@ -4,9 +4,9 @@
       <form class="form-login" action="index.html">
         <h2 class="form-login-heading">로그인</h2>
         <div class="login-wrap">
-            <input type="text" class="form-control" placeholder="사용자 아이디" autofocus>
+            <input #id type="text" class="form-control" ng-model="id" placeholder="사용자 아이디" autofocus>
             <br>
-            <input type="password" class="form-control" placeholder="비밀번호">
+            <input #pw type="password" class="form-control" ng-model="password" placeholder="비밀번호">
             <label class="checkbox">
                 <span class="pull-right">
                     <a data-toggle="modal" [routerLink]="['/forgot']"> 비밀번호 찾기</a>
@@ -14,7 +14,7 @@
                     <a data-toggle="modal" [routerLink]="['/forgot']"> 아이디 찾기</a>
                 </span>
             </label>
-            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> 로그인</button>
+            <button class="btn btn-theme btn-block" href="index.html" type="submit" (click)="submit()"><i class="fa fa-lock"></i> 로그인</button>
             <hr>
             <div class="registration">
                 
@@ -53,3 +53,5 @@
   
   </div>
 </div>
+
+

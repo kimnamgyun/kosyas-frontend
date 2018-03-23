@@ -1,0 +1,48 @@
+
+<br><br>
+<div *ngIf="celebroFullData">
+<!--
+<button style="border:2px solid; width:600px; align:center;font-size:25px;margin-left:20px;">{{subject}}</button><br><br>
+<button style="border:2px solid; width:600px; align:center;font-size:25px;margin-left:20px;">{{node}} nodes</button><br><br>
+<button style="border:2px solid; width:600px; align:center;font-size:25px;margin-left:20px;">{{indice}} indices</button><br><br>
+<button style="border:2px solid; width:600px; align:center;font-size:25px;margin-left:20px;">{{shard}} shards</button><br><br>
+<button style="border:2px solid; width:600px; align:center;font-size:25px;margin-left:20px;">{{doc}} docs</button><br><br>
+<button style="border:2px solid; width:600px; align:center;font-size:25px;margin-left:20px;">{{capable}}{{unit}}</button><br><br>
+-->
+<button class="btn-value-systemconfig">{{subject}}</button><br><br>
+<button class="btn-value-systemconfig">{{celebroFullData.data.node}} node</button><br><br>
+<button class="btn-value-systemconfig">{{celebroFullData.data.indices}} indices</button><br><br>
+<button class="btn-value-systemconfig">{{celebroFullData.data.shards}} shards</button><br><br>
+<button class="btn-value-systemconfig">{{celebroFullData.data.docs}} docs</button><br><br>
+<button class="btn-value-systemconfig">{{celebroFullData.data.disk | uppercase}}</button><br><br>
+</div>
+<!--
+<br><br>
+<input style="font-size:20px;margin-left:20px;width:400px;" placeholder="filter indices by name or aliases"><br><br>
+<input style="font-size:20px;margin-left:20px;width:400px;" placeholder="filter node by name">
+<br><br>
+<br><br>
+<input type="checkbox">master
+<input type="checkbox">data
+<input type="checkbox">ingest
+<input type="checkbox">coordinating
+<br>
+<table  style="margin-left:20px; border:2px solid;">
+  <tr  style="text-align:center;border-bottom:2px solid;font-size:20px;background-color:rgb(194, 194, 194);">
+    <th >name</th>
+    <th style="border-left:2px solid;">load</th>
+    <th style="border-left:2px solid;">process cpu%</th>
+    <th style="border-left:2px solid;">heap usage %</th>
+    <th style="border-left:2px solid;">disk usage %</th>
+    <th style="border-left:2px solid;">uptime</th>
+  </tr>
+  <tr style="text-align:center;border-bottom:2px solid;font-size:30px;">
+    <td >{{name}}</td>
+    <td style="border-left:2px solid;">{{load}}</td>
+    <td style="border-left:2px solid;">{{process}}</td>
+    <td style="border-left:2px solid;">{{heap}}</td>
+    <td style="border-left:2px solid;">{{disk}}</td>
+    <td style="border-left:2px solid;">{{uptime}}</td>
+  </tr>
+</table>
+-->

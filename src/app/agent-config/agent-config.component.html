@@ -1,0 +1,50 @@
+<br>
+<br>
+<div *ngIf="wazuhmanagerStatus.data['ossec-authd']==='running'; else elseStatus">
+  <span style="font-size:40px;">Wazuh Manager Status </span>&nbsp;&nbsp;&nbsp;
+  <img style="width:1.8em; height:1.8em" src="/assets/img/button_round_green.png">
+</div>
+<ng-template #elseStatus>
+  <span style="font-size:40px;">Wazuh Manager Status </span>&nbsp;&nbsp;&nbsp;
+  <img style="width:1.8em; height:1.8em;" src="/assets/img/button_round_red.png">
+</ng-template>
+<br>
+<br>
+<div *ngIf="wazuhagentlists">
+  <span style="font-size:25px;">Agent List</span>
+  <table>
+    <tr class="tb-WAhead">
+      <th class="tb-th-WAid" style="width:70px;">ID</th>
+      <th class="tb-th-WAname" style="width:200px;">Name</th>
+      <th class="tb-th-WAip" style="width:150px;">IP</th>
+      <th class="tb-th-WAstatus" style="width:90px;">Status</th>
+      <th class="tb-th-WAos" style="width:250px;">OS platform</th>
+      <th class="tb-th-WAversion" style="width:150px;">Agent version</th>
+    </tr>
+    <tr *ngFor="let wazuhagentlist of wazuhagentlists" (click)="onSelectAgent(wazuhagentlist)">
+      <td>{{wazuhagentlist.id}}</td>
+      <td>{{wazuhagentlist.name}}</td>
+      <td>{{wazuhagentlist.ip}}</td>
+      <td ngif="wazuhagentlist.status==='Active'; else elseagentstop">
+        <img style="width:1.2em; height:1.2em;padding-top:1em;" src="/assets/img/button_round_green.png">
+      </td>
+      <ng-template #elseagentstop>
+        <img style="width:2em; height:2em;" src="/assets/img/button_round_red.png">
+      </ng-template>
+      <td>{{wazuhagentlist.os.platform}}{{wazuhagentlist.os.version}}</td>
+      <td>{{wazuhagentlist.version}}</td>
+    </tr>
+  </table>
+</div>
+<br>
+<br>
+
+<div *ngIf="selectWazuhagent">
+  <span style="font-size:25px;">Select Agent Detail</span>
+  <br>
+  <table>
+    <tr>
+      <th></th>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,125 @@
+<div class="link_nav">
+  <ul>
+    <li class="select">
+      <a [routerLink]="['/analysis-overview']">Corelation</a>
+    </li>
+    <br>
+    <div>
+      <li class="sub">
+        <a [routerLink]="['/analysis-overview']">Overview</a>
+      </li>
+      <br>
+      <li class="sub">
+        <a [routerLink]="['/analysis-config']">Configuration</a>
+      </li>
+      <br>
+      <li class="sub select">
+        <a [routerLink]="['/analysis-addrule']">Add Rule</a>
+      </li>
+    </div>
+  </ul>
+</div>
+
+<div class="content-subject">&nbsp;&nbsp;Analysis - Set rules
+</div>
+<br>
+<br>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'list')">Rule list</button>
+  <button class="tablinks" onclick="openCity(event, 'Template')">Template</button>
+  <button class="tablinks" onclick="openCity(event, 'Configuration')">Configuration</button>
+</div>
+
+<h3>&nbsp;&nbsp;Rule list</h3>
+<table style="margin-left:50px; border:none;outline: none;">
+  <tr style="text-align:center;border-color:rgb(194, 194, 194);font-size:20px;background-color:rgb(194, 194, 194);">
+    <th style="width:30px;align:center;"></th>
+    <th style="width:120px;align:center;">Date</th>
+    <th style="width:120px;align:center;">Status</th>
+    <th style="width:150px;align:center;">Label</th>
+    <th style="width:120px;align:center;">Type</th>
+    <th style="width:120px;align:center;">User</th>
+    <th style="width:300px;align:center;">Content</th>
+  </tr>
+  <tr style="text-align:center;border-bottom:2px solid;font-size:15px;">
+    <td>
+      <input type="checkbox">
+    </td>
+    <td>15day ago</td>
+    <td>drop</td>
+    <td>DDoS+</td>
+    <td>Intrusion</td>
+    <td>tgkim@kosyas.com</td>
+    <td>Source IP+;Status+;Url+;</td>
+  </tr>
+  <tr style="text-align:center;border-bottom:2px solid;font-size:15px;">
+    <td>
+      <input type="checkbox">
+    </td>
+    <td>1month ago</td>
+    <td>drop</td>
+    <td>head overflow</td>
+    <td>Intrusion</td>
+    <td>tgkim@kosyas.com</td>
+    <td>APP+;Url+;</td>
+  </tr>
+  <tr style="text-align:center;border-bottom:2px solid;font-size:15px;">
+    <td>
+      <input type="checkbox">
+    </td>
+    <td>2017.12.30</td>
+    <td>up</td>
+    <td>log alert+</td>
+    <td>System</td>
+    <td>tgkim@kosyas.com</td>
+    <td>Destination IP+;system+;</td>
+  </tr>
+  <tr style="text-align:center;border-bottom:2px solid;font-size:15px;">
+    <td>
+      <input type="checkbox">
+    </td>
+    <td>15day ago</td>
+    <td>drop</td>
+    <td>DDoS+</td>
+    <td>Intrusion</td>
+    <td>tgkim@kosyas.com</td>
+    <td>Source IP+;Status+;Url+;</td>
+  </tr>
+  <tr style="text-align:center;border-bottom:2px solid;font-size:15px;">
+    <td>
+      <input type="checkbox">
+    </td>
+    <td>1month ago</td>
+    <td>drop</td>
+    <td>head overflow</td>
+    <td>Intrusion</td>
+    <td>tgkim@kosyas.com</td>
+    <td>APP+;Url+;</td>
+  </tr>
+  <tr style="text-align:center;border-bottom:2px solid;font-size:15px;">
+    <td>
+      <input type="checkbox">
+    </td>
+    <td>2017.12.30</td>
+    <td>up</td>
+    <td>log alert+</td>
+    <td>System</td>
+    <td>tgkim@kosyas.com</td>
+    <td>Destination IP+;system+;</td>
+  </tr>
+</table>
+
+<div id="list" class="tabcontent">
+  <h3>Rule list</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Template" class="tabcontent">
+  <h3>Template</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Configuration" class="tabcontent">
+  <h3>Configuration</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
